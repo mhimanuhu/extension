@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACE Prep - Assessments</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f7f9fc;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Top Header Bar */
+        .top-header {
+            background-color: #0d6efd; /* Blue color */
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+
+        }
+        .logo img{
+            width: 250px;
+            height:70px;
+        }
+
+
+
+
+
+        .top-nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .assessment-btn {
+            background-color: #ffc107; /* Yellow color */
+            color: black !important;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .user-avatar {
+            background-color: #ffc107; /* Yellow color */
+            color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Content Header */
+        .content-header {
+            background-color: #fffbeb; /* Cream color */
+            padding: 20px 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #1a202c;
+        }
+
+        .status-tabs {
+            display: flex;
+            gap: 30px;
+        }
+
+        .status-tabs a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #718096;
+            padding-bottom: 10px;
+        }
+
+        .status-tabs a.active {
+            color: #0d6efd;
+            font-weight: bold;
+            border-bottom: 3px solid #0d6efd;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            padding: 40px;
+            flex-grow: 1; /* Pushes footer down */
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #1a202c;
+        }
+
+        /* Assessment Card */
+        .card {
+            background-color: #f1f8ff; /* Light blue card background */
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .card-header {
+            background-color: #d1e9ff; /* Blue card header */
+            padding: 15px 20px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #1a202c;
+        }
+
+        .card-subtitle {
+            font-size: 12px;
+            color: #0d6efd;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .info-item .label {
+            font-size: 10px;
+            color: #718096;
+        }
+
+        .info-item .value {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1a202c;
+        }
+
+        .status-badge {
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .take-test-btn {
+            background-color: white;
+            color: #0d6efd;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: #edf2f7; /* Light gray footer */
+            color: #4a5568;
+            padding: 20px 40px;
+            border-top: 1px solid #e0e0e0;
+            margin-top: auto;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            color: #0d6efd;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="logo">
+
+                <img src="./logo.webp" >
+
+        </div>
+        <nav class="top-nav">
+            <a href="#"><span style="font-size: 12px;">📊</span> My Dashboard</a>
+            <a href="#" class="assessment-btn">My Assessments</a>
+            <a href="#">My Courses</a>
+            <div class="user-avatar">Z</div> </nav>
+    </header>
+
+    <div class="content-header">
+        <div class="page-title">Assessments</div>
+        <div class="status-tabs">
+            <a href="#" class="active">Active</a>
+            <a href="#">Completed</a>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="section-title">Active Assessments</div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Benchmark Test | PU | 16 Mar</div>
+                <div class="card-subtitle">PRACTICE</div>
+            </div>
+            <div class="card-body">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="label">Total Sections</div>
+                        <div class="value">6</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">Total Questions</div>
+                        <div class="value">57</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">Duration</div>
+                        <div class="value">180m</div>
+                    </div>
+                </div>
+                <div class="status-badge">Status: Scheduled</div>
+                <a href="#" class="take-test-btn">Take Test</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div>© 2026 FACE Prep. All rights reserved.</div>
+        <div class="footer-links">
+            <a href="https://microsoftedge.microsoft.com/addons/detail/always-active-window-al/mpappcpgjachepaibhgpbnhhmneojmkc" target="_blank">Always active</a>
+            <a href="https://microsoftedge.microsoft.com/addons/detail/enable-copy-paste-ecp/lepcimpolkbhimlaabjbinhlohocmjal" target="_blank">ECP</a>
+            <a href="https://microsoftedge.microsoft.com/addons/detail/enable-right-click/mmgbmlkcilpljeddfddljgjgfejaegab" target="_blank">Enable Rc</a>
+            <a href="https://microsoftedge.microsoft.com/addons/detail/enable-right-click-for-br/lbnohfpkjobaompkendjljgljpmldpoa" target="_blank">RC Browser</a>
+        </div>
+    </footer>
+
+</body>
+</html>
